@@ -13,7 +13,9 @@ export const Header = ({onClick}:headerProps) => (
           name="task"
           placeholder="Adicione uma nova tarefa"
           type="text"
-          className="p-4 w-5/12 border border-gray-950 rounded-lg bg-gray-700 mr-2 leading-6 font-normal text-base focus:border-[#5E60CE] focus:outline-0 "
+          className="p-4 w-5/12 border border-gray-950 rounded-lg bg-gray-700
+          mr-2 leading-6 font-normal text-base focus:border-[#5E60CE] focus:outline-0 "
+          required
         />
         <button 
         className="p-4 flex items-center justify-center gap-3 w-24
