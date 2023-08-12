@@ -4,8 +4,9 @@ import { BsTrash3 } from "react-icons/bs"
 interface TaskProps {
   taskContent: string;
   onDelete: () => void;
-  onChange: () => void
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
 
 export const Task = ({ taskContent, onDelete,onChange }:TaskProps) => {
   const [isTaskCompleted, setIsTaskCompleted] = useState<boolean>(false)
@@ -16,7 +17,7 @@ export const Task = ({ taskContent, onDelete,onChange }:TaskProps) => {
 
   return (
     <div
-      className={`p-4 w-full rounded-lg border flex justify-between gap-4 border-gray-700 items-center ${
+      className={`p-4  w-full rounded-lg border flex justify-between gap-4 border-gray-700 items-center ${
         isTaskCompleted ? "bg-gray-700 " : ""
       }`}
     >
