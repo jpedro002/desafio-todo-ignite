@@ -7,7 +7,7 @@ interface headerProps{
 export const Header = ({onClick}:headerProps) => (
     <header className="bg-gray-950">
     <div className="text-white flex justify-center items-center w-screen h-44 bg-gray-950 relative">
-      <img src="src/assets/Logo.png" alt="Logo" />
+      <img src="https://github.com/jpedro002/desafio-todo-ignite/blob/main/src/assets/Logo.png" alt="Logo" />
       <form onSubmit={onClick} className="w-full flex justify-center absolute bottom-[-28px] ">
         <input
           name="task"
