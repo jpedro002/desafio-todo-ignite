@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { BsTrash3 } from "react-icons/bs";
+import { useState } from "react"
+import { BsTrash3 } from "react-icons/bs"
 
 interface TaskProps {
   taskContent: string;
@@ -8,11 +8,11 @@ interface TaskProps {
 }
 
 export const Task = ({ taskContent, onDelete,onChange }:TaskProps) => {
-  const [isTaskCompleted, setIsTaskCompleted] = useState<boolean>(false);
+  const [isTaskCompleted, setIsTaskCompleted] = useState<boolean>(false)
 
   const handleCheckboxChange = () => {
     setIsTaskCompleted(!isTaskCompleted)
-  };
+  }
 
   return (
     <div
@@ -38,5 +38,5 @@ export const Task = ({ taskContent, onDelete,onChange }:TaskProps) => {
         <BsTrash3 />
       </button>
     </div>
-  );
-};
+  )
+}
