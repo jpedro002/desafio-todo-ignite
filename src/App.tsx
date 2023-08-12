@@ -36,7 +36,7 @@ export const App: React.FC<Props> = () => {
 
   return (
     <>
-      <Header onClick={() => handleSubmitTask} />
+      <Header onClick={(e) => handleSubmitTask(e)} />
       <main>
         <div className="w-screen h-full min-h-[100vh] bg-gray-800 flex justify-center">
           <div className="p-[64px_24px] gap-3 w-[43rem] flex flex-col justify-start items-center space-y-4">

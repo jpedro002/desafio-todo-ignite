@@ -1,13 +1,14 @@
 import { BsPlusCircle } from "react-icons/bs";
+import { FormEvent } from 'react';
 
-interface headerProps{
-    onClick: () => void
+interface headerProps {
+    onClick: (e: FormEvent<HTMLFormElement>) => void;
 }
 
 export const Header = ({onClick}:headerProps) => (
     <header className="bg-gray-950">
     <div className="text-white flex justify-center items-center w-screen h-44 bg-gray-950 relative">
-      <img src="https://github.com/jpedro002/desafio-todo-ignite/blob/main/src/assets/Logo.png" alt="Logo" />
+      <img src="https://github.com/jpedro002/desafio-todo-ignite/blob/00ef2ab12175d46e6287151eca81081aa734c368/src/assets/Logo.png?raw=true" alt="Logo" />
       <form onSubmit={onClick} className="w-full flex justify-center absolute bottom-[-28px] ">
         <input
           name="task"
@@ -24,7 +25,7 @@ export const Header = ({onClick}:headerProps) => (
          >
           Criar <BsPlusCircle />
         </button>
-      </form>
+      </form> 
     </div>
   </header>
 );
