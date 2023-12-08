@@ -1,20 +1,13 @@
-import { useState } from "react"
 import { BsTrash3 } from "react-icons/bs"
 
 interface TaskProps {
   taskContent: string;
   onDelete: () => void;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  isTaskCompleted: boolean;
 }
 
-
-export const Task = ({ taskContent, onDelete,onChange }:TaskProps) => {
-  const [isTaskCompleted, setIsTaskCompleted] = useState<boolean>(false)
-
-  const handleCheckboxChange = () => {
-    setIsTaskCompleted(!isTaskCompleted)
-  }
-
+export const Task = ({ taskContent, onDelete, onChange, isTaskCompleted }: TaskProps) => {
   return (
     <div
       className={`p-4  w-full rounded-lg border flex justify-between gap-4 border-gray-700 items-center ${
@@ -24,9 +17,8 @@ export const Task = ({ taskContent, onDelete,onChange }:TaskProps) => {
       <input
         type="checkbox"
         className="rounded-full"
-        onClick={handleCheckboxChange}
-				onChange={onChange}
-
+        checked={isTaskCompleted}
+        onChange={onChange}
       />
       <p
         className={`font-normal text-gray-200 ${
